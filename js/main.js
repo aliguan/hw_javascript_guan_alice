@@ -5,11 +5,40 @@ iceCream.push( 'Cookie Dough' );
 
 // Object inside Array
 var presidents = [
-    { firstName: 'Barack', lastName: 'Obama', termLength: '2', party: 'Democrat', yearsOfPresidency: '8' },
-    { firstName: 'George W.', lastName: 'Bush', termLength: '2', party: 'Republican', yearsOfPresidency: '8' },
-    { firstName: 'Bill', lastName: 'Clinton', termLength: '2', party: 'Democrat', yearsOfPresidency: '8' },
-    { firstName: 'George H.', lastName: 'Bush', termLength: '1', party: 'Republican', yearsOfPresidency: '4' },
-    { firstName: 'Ronald', lastName: 'Reagan', termLength: '2', party: 'Republican', yearsOfPresidency: '8' }
+    {
+        firstName: 'Barack',
+        lastName: 'Obama',
+        termLength: '2',
+        party: 'Democrat',
+        yearsOfPresidency: '8'
+    },
+    {
+        firstName: 'George W.',
+        lastName: 'Bush',
+        termLength: '2',
+        party: 'Republican',
+        yearsOfPresidency: '8'
+    },
+    {
+        firstName: 'Bill',
+        lastName: 'Clinton',
+        termLength: '2',
+        party: 'Democrat',
+        yearsOfPresidency: '8'
+    },
+    {
+        firstName: 'George H.',
+        lastName: 'Bush',
+        termLength: '1',
+        party: 'Republican',
+        yearsOfPresidency: '4' },
+    {
+        firstName: 'Ronald',
+        lastName: 'Reagan',
+        termLength: '2',
+        party: 'Republican',
+        yearsOfPresidency: '8'
+    }
 ];
 
 console.log( presidents[ 2 ].firstName + ' ' + presidents[ 2 ].lastName );
@@ -41,8 +70,10 @@ function inception( callback, value ) {
     callback( value );
 }
 
-var callback = function() {
-    console.log( 'Inception is a fantastic movie!' );
+var callback = function( value ) {
+    console.log( value );
 };
 
-inception( callback );
+var value = 'Inception is a fantastic movie!';
+
+inception( callback, value );
